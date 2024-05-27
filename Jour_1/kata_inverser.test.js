@@ -7,3 +7,7 @@ test("vérifie que pas d'argument retourne faux", () => {
   test("vérifie l'orientation horizontale", () => { 
     expect(inverse([[1,2,3],[4,5,6],[7,8,9]], "horizontale")). toStrictEqual([[3,2,1],[6,5,4],[9,8,7]]); 
   });
+
+  test("vérifie l'orientation verticale", () => { 
+    expect(inverse([[1,2,3],[4,5,6],[7,8,9]], "verticale")). toStrictEqual([[7,8,9],[4,5,6],[1,2,3]]); 
+  });

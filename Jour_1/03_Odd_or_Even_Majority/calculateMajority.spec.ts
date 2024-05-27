@@ -1,5 +1,5 @@
 import { expect, test, describe } from "vitest";
-import { calculateMajority } from "./03_Odd_or_even_majority";
+import { calculateMajority } from "./calculateMajority";
 
 describe("calculateMajority", () => {
   test("the majority should be 'Odd Majority'", () => {

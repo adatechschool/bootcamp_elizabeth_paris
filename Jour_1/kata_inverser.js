@@ -1,10 +1,14 @@
-function inverse (arrayOfArrayNumer,orientation) {
+function inverse (arrayOfArrayNumber,orientation) {
     if (orientation == "horizontale") {
-        for (let i = 0; i<arrayOfArrayNumer.length; i++) {
-            arrayOfArrayNumer[i].reverse()
+        for (let i = 0; i<arrayOfArrayNumber.length; i++) {
+            arrayOfArrayNumber[i].reverse()
             
         }
-        return arrayOfArrayNumer
+        return arrayOfArrayNumber
+    }
+    else if (orientation == "verticale") {
+        arrayOfArrayNumber.reverse()
+        return arrayOfArrayNumber
     }
     return false
 }

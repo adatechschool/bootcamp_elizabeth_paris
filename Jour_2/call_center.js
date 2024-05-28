@@ -1,62 +1,21 @@
-const respondent = {
-    name: "Marie",
-    job: "respondent",
-    isAvailable: true,
-
-    getCall: function () {
-        if (this.isAvailable == true ) {
-            console.log(`The ${this.job} ${this.name} get the call.`)
-        }
-    },
-
-};
-
-const manager = {
-    name: "Hortense",
-    job: "manager",
-    isAvailable: true,
-
-    getCall: function () {
-        if (this.isAvailable == true ) {
-            console.log(`The ${this.job} ${this.name} get the call.`)
-        }
-    },
-
-};
-
-const director = {
-    name: "Pauline",
-    job: "director",
-    isAvailable: true,
-
-    getCall: function () {
-        if (this.isAvailable == true ) {
-            console.log(`The ${this.job} ${this.name} get the call.`)
-        }
-    },
-
-};
-
-const marie = Object.create(respondent);
-//marie.isAvailable = false
-const hortense = Object.create(manager);
-const pauline = Object.create(director);
-
-class callCenter {
+class worker {
     constructor(job, isAvailable) {
         this.job = job;
         this.isAvailable = isAvailable;
     }
+}
 
-    dispatchCall () {
-        if (this.job == "respondent" && this.isAvailable == true) {
-            console.log(`The ${this.job} get the call.`)
+class callCenter {
+
+    dispatchCall (respondent, manager, director) {
+        if (respondent.job == "respondent" && respondent.isAvailable == true) {
+            console.log(`The ${respondent.job} get the call.`)
         }
-        else if (this.jobjob == "manager" && this.isAvailable == true) {
-            console.log(`The ${this.job} get the call.`)
+        else if (manager.job == "manager" && manager.isAvailable == true) {
+            console.log(`The ${manager.job} get the call.`)
         }
-        else if (this.job == "director" && this.isAvailable == true) {
-            console.log(`The ${this.job} get the call.`)
+        else if (director.job == "director" && director.isAvailable == true) {
+            console.log(`The ${director.job} get the call.`)
         }
         else {
             console.log("No one is available.")
@@ -64,8 +23,9 @@ class callCenter {
     }
 };
 
-const Marie = new callCenter("respondent", false);
-const Hortense = new callCenter("manager", true);
-const Pauline = new callCenter("director", true)
+const Marie = new worker("respondent", true);
+const Hortense = new worker("manager", true);
+const Pauline = new worker("director", true)
+const call = new callCenter()
 
-Marie.dispatchCall()
+call.dispatchCall(Marie, Hortense, Pauline)

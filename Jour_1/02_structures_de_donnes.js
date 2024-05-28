@@ -19,3 +19,18 @@ let uniqueChar = (string) => {
 
 console.log('with set :', uniqueChar(stringEx1));
 console.log('with set :', uniqueChar(stringEx2));
+
+  // without new datastructure
+  let uniqueChar2 = (string) => {
+    for (let i = 0; i < string.length; i++) {
+      for (let j = i + 1; j < string.length; j++) {
+        if (string[i] === string[j]) {
+          return false;
+        }
+      }
+    }
+    return true;
+  };
+  
+  console.log('without set :', uniqueChar2(stringEx1));
+  console.log('without set :', uniqueChar2(stringEx2));

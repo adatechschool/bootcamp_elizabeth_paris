@@ -42,13 +42,30 @@ const marie = Object.create(respondent);
 const hortense = Object.create(manager);
 const pauline = Object.create(director);
 
-class callCenter () {
-    worker(job, isAvailable) {
+class callCenter {
+    constructor(job, isAvailable) {
         this.job = job;
         this.isAvailable = isAvailable;
     }
 
     dispatchCall () {
-
+        if (this.job == "respondent" && this.isAvailable == true) {
+            console.log(`The ${this.job} get the call.`)
+        }
+        else if (this.jobjob == "manager" && this.isAvailable == true) {
+            console.log(`The ${this.job} get the call.`)
+        }
+        else if (this.job == "director" && this.isAvailable == true) {
+            console.log(`The ${this.job} get the call.`)
+        }
+        else {
+            console.log("No one is available.")
+        }
     }
-}
+};
+
+const Marie = new callCenter("respondent", false);
+const Hortense = new callCenter("manager", true);
+const Pauline = new callCenter("director", true)
+
+Marie.dispatchCall()

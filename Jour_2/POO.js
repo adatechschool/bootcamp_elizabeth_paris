@@ -31,13 +31,13 @@ function finishCall(employee) {
 function addEmployee(employee) {
     if (employee.type === 'Respondent') {
         respondents.push(employee)
-        console.log(`Ajouté ${employee.name} comme Respondent`)
+        console.log(`Ajouté ${employee.name} comme Employé`)
     } else if (employee.type === 'Manager') {
         managers.push(employee)
         console.log(`Ajouté ${employee.name} comme Manager`)
     } else if (employee.type === 'Director') {
         directors.push(employee)
-        console.log(`Ajouté ${employee.name} comme Director`)
+        console.log(`Ajouté ${employee.name} comme Directeur`)
     }
 }
 
@@ -69,8 +69,8 @@ function dispatchCall() {
 }
 
 // Création des employés
-let respondent1 = createEmployee("Répondant 1", "Respondent")
-let respondent2 = createEmployee("Répondant 2", "Respondent")
+let respondent1 = createEmployee("Employé 1", "Respondent")
+let respondent2 = createEmployee("Employé 2", "Respondent")
 let manager1 = createEmployee("Manager 1", "Manager")
 let director1 = createEmployee("Directeur 1", "Director")
 
@@ -92,6 +92,6 @@ dispatchCall()  // Devrait indiquer que tous les employés sont occupés
 console.log("\nFin d'un appel:")
 finishCall(respondent1)
 dispatchCall()        // Devrait attribuer l'appel à l'employé 1
-finishCall(director1) // Devrait attribuer l'appel au Directeur 1
-dispatchCall()
+finishCall(director1) 
+dispatchCall()        // Devrait attribuer l'appel au Directeur 1
 

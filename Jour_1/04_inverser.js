@@ -26,8 +26,7 @@ const flipArray = (array, direction) => {
         for(const element of array){
             element.reverse();
         }
-    }
-    if(direction === "vertical"){
+    } else if(direction === "vertical"){
         array.reverse();
     }
     return array;

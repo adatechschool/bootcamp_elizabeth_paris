@@ -41,3 +41,14 @@ const marie = Object.create(respondent);
 //marie.isAvailable = false
 const hortense = Object.create(manager);
 const pauline = Object.create(director);
+
+class callCenter () {
+    worker(job, isAvailable) {
+        this.job = job;
+        this.isAvailable = isAvailable;
+    }
+
+    dispatchCall () {
+
+    }
+}

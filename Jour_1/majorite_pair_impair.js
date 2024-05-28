@@ -16,7 +16,7 @@
 const majority = (arr) => {
 
 let occurenceMaximale = 1
-let nombreMajoritaire = 0
+let nombreMajoritaire = null
 let impairs = 0
 let pairs = 0
 
@@ -32,12 +32,12 @@ for (let i = 0 ; i < arr.length ; i++){
                 occurenceMaximale = occurence
                 nombreMajoritaire = arr[i]
             } else if (occurence == occurenceMaximale){
-                nombreMajoritaire = 0
+                nombreMajoritaire = null
             }}
     }
 }
 
-if (nombreMajoritaire == 0){
+if (nombreMajoritaire == null){
     if(pairs > impairs){
         return "majorité pairs"
     }

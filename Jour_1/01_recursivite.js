@@ -15,4 +15,4 @@ function waysCount(n) {
   return waysCount(n - 1) + waysCount(n - 2) + waysCount(n - 3);
 }
 
-console.log(waysCount(4));
+console.log(waysCount(4)); // 7

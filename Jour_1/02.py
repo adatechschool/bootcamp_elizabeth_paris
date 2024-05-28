@@ -6,5 +6,13 @@ def isAllCharUnique(str):
         charSet.add(char)
     return True
 
+def idemMaisPlusCourt(str):
+    arr = [*str]
+    charSet = set(arr)
+    return len(arr) == len(charSet)
+
 print(isAllCharUnique('cou'))
 print(isAllCharUnique('coucou'))
+
+print(idemMaisPlusCourt('cou'))
+print(idemMaisPlusCourt('coucou'))

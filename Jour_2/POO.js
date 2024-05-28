@@ -48,12 +48,13 @@ const calls = ["call1", "call2", "call3", "call4", "call5"]
 //Fonction pour dispatcher les appels :
 function dispatchCall(){
     let arraySorted = arrayOfObjects.sort((a,b) => b.status - a.status)
-    console.log(arraySorted);
-    for(let i = 0; i < arrayOfObjects.length; i++){
-        console.log("coucou");
+    
+    for(let i = 0; i < arraySorted.length; i++){
+     
         if(arrayOfObjects[i].free === true){
-            console.log(arrayOfObjects[i], "a pris", calls[0]);
+            console.log(arraySorted[i], "a pris", calls[0]);
             calls.shift();
+            arraySorted[i] = false;
         } 
     }
     return ["Il reste", calls, "à prendre"];
@@ -64,13 +65,9 @@ console.log(dispatchCall());
 
 
 
-
-
 //Ou une méthode à appeler avec la classe ? :
 //La méthode ".prototype" sert à rajouter une fonction au constructeur d'objet, lorsqu'on est en dehors de lui :
 // Employee.prototype.dispatchCall = function () {
 //     console.log("Am I free ? " + this.free);
-//     if (Employee.free === false){
-
-//     }
+//     
 //  }

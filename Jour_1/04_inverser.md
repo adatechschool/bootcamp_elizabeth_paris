@@ -26,5 +26,7 @@ Tandis qu'en mode "vertical", on obtient
 
 ```
 > flip(array, 'vertical')
-> [[7,8,9],[4,5,6],[1,2,3]]
+> [[7,8,9],
+   [4,5,6],
+   [1,2,3]]
 ```

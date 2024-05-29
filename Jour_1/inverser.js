@@ -19,27 +19,63 @@
 // > [[7,8,9],[4,5,6],[1,2,3]]
 
 
-function reverseArrayHorizont(array){
+// function reverseArrayHorizont(array){
+//     let newArray = []
+
+//     for (let i=0; i<array.length; i++){
+//         newArray.push(array[i].reverse())
+        
+//     }
+
+//     return newArray
+// };
+
+
+
+// function reverseArrayVertical(array){
+//     let newArray = array.reverse()
+
+//    return newArray
+
+// };
+
+
+// console.log(reverseArrayHorizont([[1,2,3],[4,5,6],[7,8,9]]))
+// console.log(reverseArrayVertical([[1,2,3],[4,5,6],[7,8,9]]))
+
+
+
+function flip (array, direction){
+
     let newArray = []
 
     for (let i=0; i<array.length; i++){
+        if (direction === "vertical"){
         newArray.push(array[i].reverse())
-        
+        }
+
+        if (direction === "horizontal"){
+            newArray = array.reverse()
+        }
+    
+
     }
 
-    return newArray
-};
+ return newArray
+
+}
 
 
 
-function reverseArrayVertical(array){
-    let newArray = array.reverse()
-
-   return newArray
-
-};
-
-
-console.log(reverseArrayHorizont([[1,2,3],[4,5,6],[7,8,9]]))
-console.log(reverseArrayVertical([[1,2,3],[4,5,6],[7,8,9]]))
-
+// const flipArray = (array, direction) => {
+//     if( direction === "horizontal"){
+//         for(const element of array){
+//             element.reverse();
+//         }
+//     }
+//     if(direction === "vertical"){
+//         array.reverse();
+//     }
+//     return array;
+// }
+console.log(flip([[1,2,3],[4,5,6],[7,8,9]], "horizontal"));

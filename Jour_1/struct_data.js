@@ -11,4 +11,4 @@ for (let i=0; i<array.length-1; i++)
     return true
 }
 
-console.log(isUniqueChars("pourquoie"))
+console.log(isUniqueChars("pourquoi"))
